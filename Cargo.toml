@@ -1,0 +1,21 @@
+[package]
+name = "alloy-evm2"
+version = "0.1.0"
+edition = "2021"
+authors = ["Wikialisalabs Foundation <root@wikialisalabs.axvn.vn>"]
+description = "Experimental parallel EVM with Block-STM scheduler and ZK-IR output"
+license = "Apache-2.0"
+repository = "https://github.com/wikialisalabs/evm2"
+keywords = ["ethereum", "evm", "parallel", "block-stm", "zk"]
+categories = ["cryptography::cryptocurrencies", "concurrency"]
+readme = "README.md"
+
+[features]
+default = ["std"]
+std = []
+zk-ir = []       # Enable ZK-IR intermediate representation output
+parallel = []    # Enable Block-STM parallel execution scheduler
+
+[dependencies]
+alloy-core = { path = "../core" }
+alloy-evm  = { path = "../evm" }
